@@ -6,12 +6,12 @@ import { renderIntoDocument } from 'react-dom/test-utils';
 import { useGlobalContext } from './context';
 
 const Sidebar = () => {
-   const { isModalOpen, closeSidebar } = useGlobalContext();
+   const { isSidebarOpen, closeSidebar } = useGlobalContext();
    return (
-      <aside className={`${isModalOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
+      <aside className={`${isSidebarOpen? 'sidebar show-sidebar' : 'sidebar'}`}>
          <div className="sidebar-header">
             <img src={logo} alt="'coding addict " />
-            <button className="close-btn" onclick={closeSidebar}>
+            <button className="close-btn" onClick={closeSidebar}>
                <FaTimes />
             </button>
          </div>
